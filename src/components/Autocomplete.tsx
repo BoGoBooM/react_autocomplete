@@ -92,11 +92,11 @@ export const Autocomplete: React.FC<Props> = ({
 
         <div className="dropdown-menu" role="menu" data-cy="suggestions-list">
           <div className="dropdown-content">
-            {suggestions.map((person, index) => (
+            {suggestions.map(person => (
               <div
                 className="dropdown-item"
                 data-cy="suggestion-item"
-                key={index}
+                key={person.slug}
                 onClick={() => handleSelect(person)}
               >
                 <p className="has-text-link">{person.name}</p>
